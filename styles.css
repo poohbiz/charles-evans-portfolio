@@ -190,10 +190,10 @@ header#top {
 
 /* ----- Header Layout (2 rows) ----- */
 header#top .container {
-  padding-block: var(--s3);
+  padding-block: var(--s2);
   display: flex;
   flex-direction: column;
-  gap: var(--s3);
+  gap: var(--s2);
 }
 
 /* Brand line-up */
@@ -223,7 +223,7 @@ header#top h1::after {
 /* ---- Nav ---- */
 nav {
   width: 100%;
-  padding-top: var(--s3);
+  padding-top: var(--s2);
   border-top: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
 }
 
@@ -240,7 +240,7 @@ nav ul {
 
 nav a {
   display: inline-block;
-  padding: 0.6rem 0.85rem;
+  padding: 0.5rem 0.85rem;
   border-radius: 999px;
   border: 1px solid transparent;
   background: transparent;
@@ -298,10 +298,66 @@ section li {
   margin-top: 0.35rem;
 }
 
-/* About: make strong pop without shouting */
+/* About Section Image */
+.about-photo {
+  margin: var(--s4) 0 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.about-photo img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+  box-shadow: var(--shadow);
+  object-position: 85% 35%;
+}
+
+.about-photo figcaption {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Skills List: make it look intentional */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--s4) 0 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.skills-list li {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+  background: color-mix(in srgb, var(--surface-strong) 60%, transparent);
+  color: var(--muted);
+}
+
 strong {
   color: var(--text);
   font-weight: 700;
+}
+
+/* Process Section */
+.process-list {
+  margin: var(--s4) 0 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.65rem;
+  color: var(--muted);
+}
+
+.process-list li {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+  background: color-mix(in srgb, var(--surface-strong) 60%, transparent);
 }
 
 /* Projects grid + cards */
@@ -418,6 +474,15 @@ strong {
   .project-card {
     grid-column: span 12;
   }
+}
+
+/* Contact */
+.services-note {
+  margin-top: var(--s3);
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+  background: color-mix(in srgb, var(--surface-strong) 70%, transparent);
 }
 
 /* ---- Contact links as pills ---- */
